@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="92dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="top"
+        android:id="@+id/LL"
+        android:background="?android:attr/selectableItemBackground"
+        >
+
+        <RadioButton
+            android:id="@+id/select"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            ></RadioButton>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/app_icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"></ImageView>
+
+            <TextView
+                android:id="@+id/app_name"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/BLACK"></TextView>
+
+            <TextView
+                android:id="@+id/app_size"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/grey"></TextView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
