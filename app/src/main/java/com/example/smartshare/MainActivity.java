@@ -21,6 +21,7 @@ import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -189,7 +190,12 @@ public class MainActivity extends AppCompatActivity {
 
             for(int j=0;j<4;j++)
                 if(i+j<len)
-                { LLH.addView(appsList.get(i+j).getApps_view());
+                {
+                    View v=appsList.get(i+j).getApps_view();
+                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT);
+                    layoutParams.weight = 1;
+                    v.setLayoutParams(layoutParams);
+                    LLH.addView(v);
                 }
                 else break outer;
             i+=3;
